@@ -23,161 +23,29 @@ def deal_a_card(to_who, deck, already_used)
   end while already_used.include?(card)
 
   already_used.push(card)
-  
-  if card == "A (S)" || card == "A (C)" || card == "A (H)" || card == "A (D)"
-    to_who[1].push(card)
-  else
-    to_who[0].push(card)
-  end
+  to_who.push(card)
   return card
 end
 
 #method to calculate total of a hand including logic for aces
 def calculate_total(hand)
-  no_ace_total = 0
-  hand[0].each do |card|
-    no_ace_total += DECK_OF_CARDS.fetch(card)
+  total = 0
+  hand.each do |card|
+    if DECK_OF_CARDS.fetch(card) == [1, 11]
+      total += 11
+    else
+      total += DECK_OF_CARDS.fetch(card)
+    end
+  end
+
+  #ace logic: subtract 10 for each ace in the hand when the total is over 21
+  if total > 21
+    hand.select{|ace| ace == "A (S)" || ace == "A (C)" || ace == "A (H)" || ace == "A (D)"}.count.times do
+      total -= 10
+    end
   end
   
-  #ace logic
-  case
-  when hand[1].empty?
-    total = no_ace_total
-  when hand[1].count == 1
-    if no_ace_total <= 10
-      total = no_ace_total + 11
-    else
-      total = no_ace_total + 1
-    end
-  when hand[1].count == 2
-    if no_ace_total <= 9
-      total = no_ace_total + 12
-    else
-      total = no_ace_total + 2
-    end
-  when hand[1].count == 3
-    if no_ace_total <= 8
-      total = no_ace_total + 13
-    else
-      total = no_ace_total + 3
-    end
-  when hand[1].count == 4
-    if no_ace_total <= 7
-      total = no_ace_total + 14
-    else
-      total = no_ace_total + 4
-    end
-  end
   return total
-end
-
-#method to display the initial cards on the table
-def display_player_hand(dealer, player)
-  player_number_cards = player.flatten.count
-  
-  case player_number_cards
-  when 2
-    draw_2(dealer, player)
-  when 3
-    draw_3(dealer, player)
-  when 4
-    draw_4(dealer, player)
-  when 5
-    draw_5(dealer, player)
-  when 6
-    draw_6(dealer, player)
-  else
-    exit
-  end
-end
-
-#method to display dealer and player hands and update for hits (only up to 6 cards each or exit)
-def display_hands(dealer, player)
-  dealer_number_cards = dealer.flatten.count
-  player_number_cards = player.flatten.count
-  
-  if dealer_number_cards == 2
-    case
-    when player_number_cards == 2
-      draw_2x2(dealer, player)
-    when player_number_cards == 3
-      draw_2x3(dealer, player)
-    when player_number_cards == 4
-      draw_2x4(dealer, player)
-    when player_number_cards == 5
-      draw_2x5(dealer, player)
-    when player_number_cards == 6
-      draw_2x6(dealer, player)
-    else
-      exit
-    end
-  
-  elsif dealer_number_cards == 3
-    case 
-    when player_number_cards == 2
-      draw_3x2(dealer, player)
-    when player_number_cards == 3
-      draw_3x3(dealer, player)
-    when player_number_cards == 4
-      draw_3x4(dealer, player)
-    when player_number_cards == 5
-      draw_3x5(dealer, player)
-    when player_number_cards == 6
-      draw_3x6(dealer, player)
-    else
-      exit
-    end
-
-  elsif dealer_number_cards == 4
-    case
-    when player_number_cards == 2
-      draw_4x2(dealer, player)
-    when player_number_cards == 3
-      draw_4x3(dealer, player)
-    when player_number_cards == 4
-      draw_4x4(dealer, player)
-    when player_number_cards == 5
-      draw_4x5(dealer, player)
-    when player_number_cards == 6
-      draw_4x6(dealer, player)
-    else
-      exit
-    end
-
-  elsif dealer_number_cards == 5
-    case 
-    when player_number_cards == 2
-      draw_5x2(dealer, player)
-    when player_number_cards == 3
-      draw_5x3(dealer, player)
-    when player_number_cards == 4
-      draw_5x4(dealer, player)
-    when player_number_cards == 5
-      draw_5x5(dealer, player)
-    when player_number_cards == 6
-      draw_5x6(dealer, player)
-    else
-      exit
-    end
-
-  elsif dealer_number_cards == 6
-    case 
-    when player_number_cards == 2
-      draw_6x2(dealer, player)
-    when player_number_cards == 3
-      draw_6x3(dealer, player)
-    when player_number_cards == 4
-      draw_6x4(dealer, player)
-    when player_number_cards == 5
-      draw_6x5(dealer, player)
-    when player_number_cards == 6
-      draw_6x6(dealer, player)
-    else
-      exit
-    end
-  else
-    exit
-  end  
 end
 
 def determine_winner(dealer_total, player_total)
@@ -188,27 +56,23 @@ def determine_winner(dealer_total, player_total)
     puts "Your #{player_total} beats #{dealer_total}."
     puts "You win!"
   else
-    puts "Push!" 
+    puts "You both have #{player_total}. Push!" 
   end  
 end
 
 #start game loop
-play_again = "Y"
+play_again = "y"
 
-while play_again == "Y" do
+while play_again == "y" do
 
-  #empty arrays to store the cards in player and dealer hands - hand[0] for non-aces, hand[1] for aces
-  player_hand = [[], []]
-
-  dealer_hand = [[], []]
+  #empty arrays to store the cards in player and dealer hands
+  player_hand = []
+  dealer_hand = []
 
   #deal cards
   deal_a_card(player_hand, DECK_OF_CARDS, cards_in_play)
-
   deal_a_card(dealer_hand, DECK_OF_CARDS, cards_in_play)
-
   deal_a_card(player_hand, DECK_OF_CARDS, cards_in_play)
-
   deal_a_card(dealer_hand, DECK_OF_CARDS, cards_in_play)
 
   #show cards to player
@@ -216,10 +80,7 @@ while play_again == "Y" do
 
   #add up totals
   player_total = calculate_total(player_hand)
-
   dealer_total = calculate_total(dealer_hand)
-
-  #binding.pry
 
   if player_total == 21
     puts "You've got blackjack! You win!"
@@ -242,8 +103,10 @@ while play_again == "Y" do
           puts "You have #{player_total}. BUST! You lose!"
           player_busted = true
           break
-        else
-          next
+        elsif player_total == 21
+          puts "21! Very nice."
+          player_busted = false
+          break
         end
       elsif choice == "S"
         puts "You have #{player_total}."
@@ -290,7 +153,7 @@ while play_again == "Y" do
     end 
   end
   puts "Play again? (Y/N)"
-  play_again = gets.chomp.upcase
+  play_again = gets.chomp.downcase
 end
  
 

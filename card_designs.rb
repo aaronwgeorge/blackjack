@@ -1,9 +1,7 @@
+#methods to draw the cards (only works for up to 6 cards each)
 #####player turn IS NOT OVER
 
 def draw_2(hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -28,12 +26,10 @@ def draw_2(hand1, hand2)
   puts "|             |   |             |"
   puts "|             |   |             |"
   puts "|_____________|   |_____________|"
+  puts " "
 end
 
 def draw_3(hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -58,12 +54,10 @@ def draw_3(hand1, hand2)
   puts "|             |   |             |   |             |"
   puts "|             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 def draw_4(hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -88,12 +82,10 @@ def draw_4(hand1, hand2)
   puts "|             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 def draw_5(hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -113,17 +105,15 @@ def draw_5(hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |    |#{hand2[4]}    |"   
+  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |   |    #{hand2[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 def draw_6(hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -148,6 +138,7 @@ def draw_6(hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #####player turn IS OVER
@@ -159,9 +150,6 @@ end
 #2 x 2
 
 def draw_2x2 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -186,14 +174,12 @@ def draw_2x2 (hand1, hand2)
   puts "|             |   |             |"
   puts "|             |   |             |"
   puts "|_____________|   |_____________|"
+  puts " "
 end
 
 #3 x 2
 
 def draw_3x2 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------."
@@ -218,14 +204,12 @@ def draw_3x2 (hand1, hand2)
   puts "|             |   |             |"
   puts "|             |   |             |"
   puts "|_____________|   |_____________|"
+  puts " "
 end
 
 #4 x 2
 
-def draw_4x2 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
+def draw_4x2 (hand1, hand2) 
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------."
@@ -250,15 +234,13 @@ def draw_4x2 (hand1, hand2)
   puts "|             |   |             |"
   puts "|             |   |             |"
   puts "|_____________|   |_____________|"
+  puts " "
 end
 
 
 #5 x 2
 
-def draw_5x2 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
+def draw_5x2 (hand1, hand2) 
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -266,7 +248,7 @@ def draw_5x2 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |    |#{hand1[4]}    |"   
+  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |   |    #{hand1[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
@@ -283,14 +265,12 @@ def draw_5x2 (hand1, hand2)
   puts "|             |   |             |"
   puts "|             |   |             |"
   puts "|_____________|   |_____________|"
+  puts " "
 end
 
 #6 x 2
 
 def draw_6x2 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -315,6 +295,7 @@ def draw_6x2 (hand1, hand2)
   puts "|             |   |             |"
   puts "|             |   |             |"
   puts "|_____________|   |_____________|"
+  puts " "
 end
 
 #######################
@@ -324,9 +305,6 @@ end
 #2 x 3
 
 def draw_2x3 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -351,14 +329,12 @@ def draw_2x3 (hand1, hand2)
   puts "|             |   |             |   |             |"
   puts "|             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #3 x 3
 
 def draw_3x3 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------."
@@ -383,14 +359,12 @@ def draw_3x3 (hand1, hand2)
   puts "|             |   |             |   |             |"
   puts "|             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #4 x 3
 
 def draw_4x3 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------."
@@ -415,14 +389,12 @@ def draw_4x3 (hand1, hand2)
   puts "|             |   |             |   |             |"
   puts "|             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #5 x 3
 
 def draw_5x3 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -430,7 +402,7 @@ def draw_5x3 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |    |    #{hand1[4]}    |"   
+  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |   |    #{hand1[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
@@ -447,14 +419,12 @@ def draw_5x3 (hand1, hand2)
   puts "|             |   |             |   |             |"
   puts "|             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #6 x 3
 
 def draw_6x3 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -479,6 +449,7 @@ def draw_6x3 (hand1, hand2)
   puts "|             |   |             |   |             |"
   puts "|             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #######################
@@ -488,9 +459,6 @@ end
 #2 x 4
 
 def draw_2x4 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -515,14 +483,12 @@ def draw_2x4 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #3 x 4
 
 def draw_3x4 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------."
@@ -547,14 +513,12 @@ def draw_3x4 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #4 x 4
 
 def draw_4x4 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------."
@@ -579,14 +543,12 @@ def draw_4x4 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #5 x 4
 
 def draw_5x4 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -594,7 +556,7 @@ def draw_5x4 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |    |#{hand1[4]}    |"   
+  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |   |    #{hand1[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
@@ -611,14 +573,12 @@ def draw_5x4 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #6 x 4
 
 def draw_6x4 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -643,6 +603,7 @@ def draw_6x4 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #######################
@@ -652,9 +613,6 @@ end
 #2 x 5
 
 def draw_2x5 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -674,19 +632,17 @@ def draw_2x5 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |    |#{hand2[4]}    |"   
+  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |   |    #{hand2[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #3 x 5
 
 def draw_3x5 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------."
@@ -706,19 +662,17 @@ def draw_3x5 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |    |#{hand2[4]}    |"   
+  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |   |    #{hand2[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #4 x 5
 
 def draw_4x5 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------."
@@ -738,19 +692,17 @@ def draw_4x5 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |    |#{hand2[4]}    |"   
+  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |   |    #{hand2[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #5 x 5
 
 def draw_5x5 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -758,7 +710,7 @@ def draw_5x5 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |    |#{hand1[4]}    |"   
+  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |   |    #{hand1[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
@@ -770,19 +722,17 @@ def draw_5x5 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |    |#{hand2[4]}    |"   
+  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |   |    #{hand2[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #6 x 5
 
 def draw_6x5 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -802,13 +752,14 @@ def draw_6x5 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |    |#{hand2[4]}    |"   
+  puts "|    #{hand2[0]}    |   |    #{hand2[1]}    |   |    #{hand2[2]}    |   |    #{hand2[3]}    |   |    #{hand2[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
-
+  
 #######################
 #player has 6
 #######################
@@ -816,9 +767,6 @@ end
 #2 x 6
 
 def draw_2x6 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------."
@@ -843,14 +791,12 @@ def draw_2x6 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #3 x 6
 
 def draw_3x6 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten
-
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------."
@@ -875,14 +821,12 @@ def draw_3x6 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #4 x 6
 
 def draw_4x6 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------."
@@ -907,14 +851,12 @@ def draw_4x6 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end  
 
 #5 x 6
 
 def draw_5x6 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -922,7 +864,7 @@ def draw_5x6 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
-  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |    |#{hand1[4]}    |"   
+  puts "|    #{hand1[0]}    |   |    #{hand1[1]}    |   |    #{hand1[2]}    |   |    #{hand1[3]}    |   |    #{hand1[4]}    |"   
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |"
@@ -939,14 +881,12 @@ def draw_5x6 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
 #6 x 6
 
 def draw_6x6 (hand1, hand2)
-  hand1 = hand1.flatten
-  hand2 = hand2.flatten 
-  
   system "clear"
   puts "Dealer:"
   puts ".-------------.   .-------------.   .-------------.   .-------------.   .-------------.   .-------------."
@@ -971,6 +911,114 @@ def draw_6x6 (hand1, hand2)
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|             |   |             |   |             |   |             |   |             |   |             |"
   puts "|_____________|   |_____________|   |_____________|   |_____________|   |_____________|   |_____________|"
+  puts " "
 end
 
+####################################################
+####################################################
+
+#method to display the initial cards on the table (dealer shows only 1 card)
+def display_player_hand(dealer, player)
+  case player.count
+  when 2
+    draw_2(dealer, player)
+  when 3
+    draw_3(dealer, player)
+  when 4
+    draw_4(dealer, player)
+  when 5
+    draw_5(dealer, player)
+  when 6
+    draw_6(dealer, player)
+  else
+    exit
+  end
+end
+
+
+#method to display dealer and player hands and update for hits (only up to 6 cards each or exit)
+def display_hands(dealer, player)  
+  if dealer.count == 2
+    case player.count
+    when 2
+      draw_2x2(dealer, player)
+    when 3
+      draw_2x3(dealer, player)
+    when 4
+      draw_2x4(dealer, player)
+    when 5
+      draw_2x5(dealer, player)
+    when 6
+      draw_2x6(dealer, player)
+    else
+      exit
+    end
+  
+  elsif dealer.count == 3
+    case player.count
+    when 2
+      draw_3x2(dealer, player)
+    when 3
+      draw_3x3(dealer, player)
+    when 4
+      draw_3x4(dealer, player)
+    when 5
+      draw_3x5(dealer, player)
+    when 6
+      draw_3x6(dealer, player)
+    else
+      exit
+    end
+
+  elsif dealer.count == 4
+    case player.count
+    when 2
+      draw_4x2(dealer, player)
+    when 3
+      draw_4x3(dealer, player)
+    when 4
+      draw_4x4(dealer, player)
+    when 5
+      draw_4x5(dealer, player)
+    when 6
+      draw_4x6(dealer, player)
+    else
+      exit
+    end
+
+  elsif dealer.count == 5
+    case player.count
+    when 2
+      draw_5x2(dealer, player)
+    when 3
+      draw_5x3(dealer, player)
+    when 4
+      draw_5x4(dealer, player)
+    when 5
+      draw_5x5(dealer, player)
+    when 6
+      draw_5x6(dealer, player)
+    else
+      exit
+    end
+
+  elsif dealer.count == 6
+    case player.count
+    when 2
+      draw_6x2(dealer, player)
+    when 3
+      draw_6x3(dealer, player)
+    when 4
+      draw_6x4(dealer, player)
+    when 5
+      draw_6x5(dealer, player)
+    when 6
+      draw_6x6(dealer, player)
+    else
+      exit
+    end
+  else
+    exit
+  end  
+end
 
